@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -9,10 +9,10 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import 'semantic-ui-css/semantic.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './pages/homePage';
-import About from './pages/aboutPage';
-import Portfolio from './pages/portfolioPage';
-import Contact from './pages/contactPage'
+import Home from './pages/homePage/homePage';
+import About from './pages/aboutPage/aboutPage';
+// import Portfolio from './pages/portfolioPage';
+// import Contact from './pages/contactPage'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -36,21 +36,19 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <StoreProvider>
-        <Router>
-          <div>
-
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/portfolio" component={Portfolio} />
-              <Route exact path="/contact" component={Contact} />
-            
-            </Switch>
-
-          </div>
-        </Router>
-      </StoreProvider>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/About" component={About} />
+            {/* <Route exact path="/portfolio" component={Portfolio} /> */}
+            {/* <Route exact path="/contact" component={Contact} /> */}
+            <Route exact path="/home">
+              <Redirect to="/"></Redirect>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
