@@ -11,7 +11,7 @@ import 'semantic-ui-css/semantic.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/homePage/homePage';
 import About from './pages/aboutPage/aboutPage';
-// import Portfolio from './pages/portfolioPage';
+import Portfolio from './pages/portfolioPage/portfolioPage';
 // import Contact from './pages/contactPage'
 
 const httpLink = createHttpLink({
@@ -41,7 +41,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/About" component={About} />
-            {/* <Route exact path="/portfolio" component={Portfolio} /> */}
+            <Route exact path="/portfolio" component={Portfolio} />
             {/* <Route exact path="/contact" component={Contact} /> */}
             <Route exact path="/home">
               <Redirect to="/"></Redirect>
