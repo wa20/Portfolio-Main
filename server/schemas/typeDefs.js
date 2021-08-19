@@ -8,11 +8,14 @@ const typeDefs = gql
     name: String
     description: String
     image: String
+    repo: String
+    site: String
   }  
 
   
   type Query {
-    project(_id: ID!): Project
+    projects: [Project]
+    project(projectID: ID!): Project
   }
   
 `;
