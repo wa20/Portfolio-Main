@@ -1,7 +1,7 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 //const { Project } = require('../models');
 
-const { Schema, model } = require('mongoose');
+const { Schema } = mongoose;
 
 const projectSchema = new Schema({
   name: {
@@ -10,7 +10,7 @@ const projectSchema = new Schema({
   description: {
     type: String
   },
-  Repo: {
+  repo: {
     type: String
   },
   site: {
@@ -19,6 +19,11 @@ const projectSchema = new Schema({
   image: {
     type: String
   },
+  portfolio:{
+    type: Schema.Types.ObjectId,
+    ref: 'Portfolio',
+    
+  }
 });
 
 const Project = mongoose.model('Project', projectSchema);
