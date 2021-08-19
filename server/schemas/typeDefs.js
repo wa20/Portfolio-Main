@@ -3,19 +3,26 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql
 
 `
+  type Portfolio {
+    _id: ID
+    name: String
+  }
+
   type Project {
     _id: ID
     name: String
     description: String
-    image: String
     repo: String
     site: String
+    image: String
+    category: Portfolio
   }  
 
   
   type Query {
-    projects: [Project]
-    project(projectID: ID!): Project
+    portfolios: [Portfolio]
+    projects(portfolio: ID, name: String): [Project]
+    project(_id: ID!): Project
   }
   
 `;
