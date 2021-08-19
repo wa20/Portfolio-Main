@@ -1,9 +1,9 @@
 // import React from 'react'
 import React from 'react'
-import { createMedia } from '@artsy/fresnel'
+// import { createMedia } from '@artsy/fresnel'
 // import PropTypes from 'prop-types'
 import {
-    Button,
+    // Button,
     Container,
     // Divider,
     Grid,
@@ -11,19 +11,19 @@ import {
     Icon,
     // Image,
     List,
-    Menu,
+    // Menu,
     Segment,
-    Sidebar,
-    Visibility,
+    // Sidebar,
+    // Visibility,
 } from 'semantic-ui-react'
 
-const { MediaContextProvider, Media } = createMedia({
-  breakpoints: {
-    mobile: 0,
-    tablet: 768,
-    computer: 1024,
-  },
-})
+// const { MediaContextProvider, Media } = createMedia({
+//   breakpoints: {
+//     mobile: 0,
+//     tablet: 768,
+//     computer: 1024,
+//   },
+// })
 
 const Footer = () => (
     <Segment inverted vertical style={{ padding: "4em 2em" }}>
