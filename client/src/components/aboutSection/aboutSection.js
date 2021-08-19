@@ -1,6 +1,6 @@
 // import { createMedia } from "@artsy/fresnel";
 // import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 import {
 //   Button,
 //   Container,
@@ -23,7 +23,7 @@ const avatar = require("../../assets/me-bws.jpg").default;
 const AboutSection = () => {
 
 return (
-<Segment style={{ padding: '6em 0em' }} vertical>
+<Segment style={{ padding: '6em 0em'}} vertical >
     <Grid container stackable verticalAlign='middle'>
       <Grid.Row textAlign="center" >
         <Grid.Column width={8}>
