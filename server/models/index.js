@@ -1,4 +1,5 @@
 const Project = require('./Project');
+const Portfolio = require('./Portfolio')
 
 
-module.exports = { Project };
+module.exports = { Project, Portfolio };
