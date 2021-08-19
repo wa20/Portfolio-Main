@@ -1,14 +1,23 @@
 const db = require('./connection');
-const { Project } = require('../models');
+const { Portfolio, Project  } = require('../models');
 const mongoose = require('mongoose')
 
 db.once('open', async () => {
+
+  await Portfolio.deleteMany();
+
+  const portfolios = await Portfolio.insertMany([
+    { name: 'Portfolio' },
+  ]);
+
+  console.log('portfolio seeded');
+
 
   await Project.deleteMany();
 
   const paramId = new mongoose.Types.ObjectId()
 
-  const project = await Project.insertMany([
+  const projects = await Project.insertMany([
     {
       //genereated ID manually 
       _id: paramId,
@@ -16,8 +25,9 @@ db.once('open', async () => {
       description:
         'A fully functioning website utilisng MVC model',
       image: 'wrkwith.png',
-      repo: 'https://github.com/wa20/wrkwith-app',
-      site: 'https://wrkwith-app.herokuapp.com',
+      repo: "https://github.com/wa20/wrkwith-app",
+      site: "https://wrkwith-app.herokuapp.com",
+      Portfolio: portfolios[0]._id
     },
     {
       // _id: paramId,
@@ -25,8 +35,9 @@ db.once('open', async () => {
       description:
         'Book searching app/library using google books API',
       image: 'bookapp.png',
-      repo: 'https://github.com/wa20/BookApp',
-      site: 'https://wa20.github.io/BookApp/',
+      repo: "https://github.com/wa20/BookApp",
+      site: "https://wa20.github.io/BookApp/",
+      Portfolio: portfolios[0]._id
     },
     {
       // _id: paramId,
@@ -34,8 +45,9 @@ db.once('open', async () => {
       description:
         'asjhdap aojsdgadh aosdjagsdh',
       image: 'codeWallpaper.png',
-      repo: 'https://github.com/wa20/7-README-Generator',
-      site: '',
+      repo: "https://github.com/wa20/7-README-Generator",
+      site: "",
+      Portfolio: portfolios[0]._id
     },
     {
       // _id: paramId,
@@ -43,8 +55,9 @@ db.once('open', async () => {
       description:
         'asdfeeeeff',
       image: 'budgetTracker.png',
-      repo: 'https://github.com/wa20/budget-tracker',
-      site: 'https://thebudget-tracker.herokuapp.com',
+      repo: "https://github.com/wa20/budget-tracker",
+      site: "https://thebudget-tracker.herokuapp.com",
+      Portfolio: portfolios[0]._id
     },
     {
       // _id: paramId,
@@ -52,8 +65,9 @@ db.once('open', async () => {
       description:
         'sdggdd dggg',
       image: 'fitnessTracker.png',
-      repo: 'https://github.com/wa20/the-fitness-tracker',
-      site: 'https://the-fitnesstracker.herokuapp.com/?id=60e43ebb51bc3a00155d11ac',
+      repo: "https://github.com/wa20/the-fitness-tracker",
+      site: "https://the-fitnesstracker.herokuapp.com/?id=60e43ebb51bc3a00155d11ac",
+      Portfolio: portfolios[0]._id
     },
     // {
     //   _id: paramId,
@@ -61,8 +75,8 @@ db.once('open', async () => {
     //   description:
     //     '',
     //   image: '',
-    //   repo: '',
-    //   site: '',
+    //   repo: "",
+    //   site: "",
     // },
     {
       // _id: paramId,
@@ -70,8 +84,9 @@ db.once('open', async () => {
       description:
         'asdafgge ',
       image: 'codeWallpaper.png',
-      repo: 'https://github.com/wa20/8-Team-Profile-Generator"',
-      site: '',
+      repo: "https://github.com/wa20/8-Team-Profile-Generator",
+      site: "",
+      Portfolio: portfolios[0]._id
     },
     {
       // _id: paramId,
@@ -79,8 +94,9 @@ db.once('open', async () => {
       description:
         'asdasdn 020828',
       image: 'codeWallpaper.png',
-      repo: 'https://github.com/wa20/11-E-Commerce-Site',
-      site: '',
+      repo: "https://github.com/wa20/11-E-Commerce-Site",
+      site: "",
+      Portfolio: portfolios[0]._id
     },
     {
       // _id: paramId,
@@ -88,8 +104,9 @@ db.once('open', async () => {
       description:
         'dsppdshfhfdh 12e sadad',
       image: 'timedQuiz.png',
-      repo: 'https://github.com/wa20/4-Timed-Quiz',
-      site: 'https://wa20.github.io/4-Timed-Quiz/',
+      repo: "https://github.com/wa20/4-Timed-Quiz",
+      site: "https://wa20.github.io/4-Timed-Quiz/",
+      Portfolio: portfolios[0]._id
     },
     {
       // _id: paramId,
@@ -97,16 +114,13 @@ db.once('open', async () => {
       description:
         'asoosdhdh oaooa',
       image: 'dailyPlanner.png',
-      repo: 'https://github.com/wa20/5-Daily-Planner',
-      site: 'https://github.com/wa20/5-Daily-Planner/settings/pages',
+      repo: "https://github.com/wa20/5-Daily-Planner",
+      site: "https://github.com/wa20/5-Daily-Planner/settings/pages",
+      Portfolio: portfolios[0]._id
     },
-
-  
   ])
 
-
   console.log('projects seeded');
-
 
   process.exit();
 });
