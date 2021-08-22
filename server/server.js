@@ -6,6 +6,9 @@ const { typeDefs, resolvers } = require('./schemas');
 // const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
 
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -14,10 +17,35 @@ const server = new ApolloServer({
   // context: authMiddleware
 });
 
+
+//-----------------------------------------------------------------------------------------------
+
+const contactEmail = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.USER || "waelahmed.fsdev@gmail.com",
+    pass: process.env.PASS || "Yabb959d@1",
+  },
+});
+
+contactEmail.verify((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Ready to Send");
+  }
+});
+
+
+//-----------------------------------------------------------------------------------------------
+
+
+
 server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors())
 
 // Serve up static assets
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
