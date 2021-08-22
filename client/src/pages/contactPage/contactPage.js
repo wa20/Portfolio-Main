@@ -4,8 +4,7 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Footer from '../../components/footer/footer'
-// import ContactForm from '../../components/contactForm/contactForm'
-import ContactForm2 from '../../components/contactForm/contactForm2'
+import ContactForm from '../../components/contactForm/contactForm'
 import {
   Button,
   Container,
@@ -181,8 +180,8 @@ ResponsiveContainer.propTypes = {
 const Contact = () => (
   <ResponsiveContainer>
 
-      <ContactForm2/>
-    {/* <ContactForm/> */}
+    <ContactForm/>
+    
     <Footer/>
   </ResponsiveContainer>
 );
