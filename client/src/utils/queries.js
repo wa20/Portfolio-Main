@@ -3,21 +3,20 @@ import { gql } from '@apollo/client';
 
 
 export const QUERY_PROJECTS = gql`
-  query getProjects($projectId: ID) {
-    projects(projectId: $projectId) {
+  query getProjects($portfolio: ID) {
+    projects(portfolio: $portfolio) {
       _id
       name
       description
-      price
+      site
+      repo
       image
-      category {
+      portfolio {
         _id
-        name
       }
     }
   }
 `;
-
 
 
 export const QUERY_ALL_PROJECTS = gql`
@@ -28,6 +27,19 @@ export const QUERY_ALL_PROJECTS = gql`
       description
       repo
       site
+      portfolio {
+        name
       }
+    }
+  }
+`;
+
+
+export const QUERY_PORTFOLIOS = gql`
+  {
+    portfolios {
+      _id
+      name
+    }
   }
 `;
