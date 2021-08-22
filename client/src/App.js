@@ -12,7 +12,7 @@ import 'semantic-ui-css/semantic.min.css'
 import Home from './pages/homePage/homePage';
 import About from './pages/aboutPage/aboutPage';
 import Portfolio from './pages/portfolioPage/portfolioPage';
-// import Contact from './pages/contactPage'
+import Contact from './pages/contactPage/contactPage';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,7 +42,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/About" component={About} />
             <Route exact path="/portfolio" component={Portfolio} />
-            {/* <Route exact path="/contact" component={Contact} /> */}
+            <Route exact path="/contact" component={Contact} />
             <Route exact path="/home">
               <Redirect to="/"></Redirect>
             </Route>
