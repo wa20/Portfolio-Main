@@ -1,81 +1,138 @@
-// import React from 'react';
-// import axios from 'axios';
-// import CssBaseline from '@material-ui/core/CssBaseline';
-// import Typography from '@material-ui/core/Typography';
-// import Container from '@material-ui/core/Container';
+
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
+import { Button, Icon } from 'semantic-ui-react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+import emailjs from 'emailjs-com';
+import "./contact.css";
+require("dotenv").config();
 
 
-// class ContactForm extends React.Component {
+const ContactForm = () => {
 
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       name: '',
-//       email: '',
-//       message: ''
-//     }
-//   }
+const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm();
+  
 
-//   handleSubmit(e){
-//     e.preventDefault();
-//     axios({
-//       method: "POST",
-//       url:"http://localhost:3000/send",
-//       data:  this.state
-//     }).then((response)=>{
-//       if (response.data.status === 'success') {
-//         alert("Message Sent.");
-//         this.resetForm()
-//       } else if (response.data.status === 'fail') {
-//         alert("Message failed to send.")
-//       }
-//     })
-//   }
+  const toastifySuccess = () => {
+    toast('Thank you, Message Has Been Sent!', {
+      position: 'Top-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: 'submit-feedback success',
+      toastId: 'notifyToast'
+    });
+  };
 
-//   resetForm(){
-//     this.setState({name: "", email: "", message: ""})
-//   }
+  const onSubmit = async (data) => {
+    const { name, email, subject, message } = data;
+    
+    console.log('Name: ', name);
+    console.log('Email: ', email);
+    console.log('Subject: ', subject);
+    console.log('Message: ', message);
 
-//   render() {
-//     return(
+    try {
+      const templateParams = {
+        name,
+        email,
+        subject,
+        message
+      };
+      await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_USER_ID
+      );
 
-// <React.Fragment>
-// <CssBaseline />
-// <Container fixed>
-//       <div className="App">
-//         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-//           <div className="form-group">
-//               <label htmlFor="name">Name</label>
-//               <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
-//           </div>
-//           <div className="form-group">
-//               <label htmlFor="exampleInputEmail1">Email address</label>
-//               <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
-//           </div>
-//           <div className="form-group">
-//               <label htmlFor="message">Message</label>
-//               <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
-//           </div>
-//           <button type="submit" className="btn btn-primary">Submit</button>
-//         </form>
-//       </div>
-//       </Container>
-// </React.Fragment>
+     reset();
+      toastifySuccess();
+    } catch (e) {
+      console.log(e);
+    }
 
-//     );
-//   }
+  };
 
-//   onNameChange(event) {
-// 	  this.setState({name: event.target.value})
-//   }
+ 
+return (
+   
+<div style={{ padding: "8em 0em"}}>
 
-//   onEmailChange(event) {
-// 	  this.setState({email: event.target.value})
-//   }
+      <Typography variant="h6" gutterBottom className="align" style={{marginBottom:"2rem"}}>
+        Write A Message
+      </Typography>
 
-//   onMessageChange(event) {
-// 	  this.setState({message: event.target.value})
-//   }
-// }
+      <form className="align" onSubmit={handleSubmit(onSubmit)} noValidate >
+    <Grid container spacing={3} style={{width:'50vw'}} >
 
-// export default ContactForm;
+        <Grid item xs={12} sm={6}>
+          <TextField required name="name" label="Name" fullWidth placeholder="name" 
+          id="name" 
+          {...register('name', {
+            required: { value: true, message: 'Enter your name' },
+            })}
+          />
+          {errors.name && <span className='errorMessage' style={{color:"red"}}>{errors.name.message}</span>}
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField required name="email" label="Email" fullWidth placeholder="Email"
+          id="email"  
+          {...register('email', {
+            required: true,
+            pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+          })}
+          />
+           {errors.email && (
+            <span className='errorMessage' style={{color:"red"}}>Enter a valid email address</span>)}
+        </Grid>
+       
+        <Grid item xs={12}>
+
+        <TextField required  name="subject" label="Subject" fullWidth placeholder="subject"
+          id="subject" 
+          {...register('subject', {
+            required: { value: true, message: 'Enter a subject' },
+          })}
+          />
+          {errors.subject && (
+         <span className='errorMessage' style={{color:"red"}}>{errors.subject.message}</span>)}  
+        </Grid>
+
+    <Grid item xs={12}>
+        <TextField required id="standard-multiline-static" label="Message" multiline fullWidth rows={4} placeholder="Write Message"
+        id="message"
+        {...register('message', {
+            required: true
+          })}
+           />
+           {errors.message && <span className='errorMessage' style={{color:"red"}}>Enter a message</span>}
+    </Grid>
+
+    <Grid item xs={12} className="align" style={{ padding: "5em 0em"}}>
+        <Button type="submit"  icon labelPosition='right'>Send Message <Icon name='send' /></Button>
+        </Grid>
+    </Grid>
+      </form>
+      <ToastContainer />
+</div>
+   
+  )
+
+  
+
+  
+}
+
+export default ContactForm
