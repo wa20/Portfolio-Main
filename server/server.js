@@ -20,21 +20,6 @@ const server = new ApolloServer({
 
 //-----------------------------------------------------------------------------------------------
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.USER || "waelahmed.fsdev@gmail.com",
-    pass: process.env.PASS || "Yabb959d@1",
-  },
-});
-
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
-  }
-});
 
 
 //-----------------------------------------------------------------------------------------------
