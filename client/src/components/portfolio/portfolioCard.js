@@ -18,19 +18,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import {
   Button,
-  // Container,
-  // Divider,
-  // Grid,
-  // Header,
   // Icon,
-  // Image,
-  // List,
-  // Menu,
-  // Segment,
-  // Sidebar,
-  // Visibility,
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+// import { useStoreContext } from "../../utils/GlobalState";
+// import { idbPromise } from "../../utils/helpers";
 // import '../../assets/projectImages/'
 
 
@@ -69,6 +61,20 @@ export default function ProjectCard(projects) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+  // const [state, dispatch] = useStoreContext();
+
+  // const {
+  //   image,
+  //   name,
+  //   description,
+  //   repo,
+  //   site
+  // } = item;
+
+  if (!projects.length) {
+    return <h3>No Projects Yet</h3>;
+  }
 
   return (
 
@@ -112,7 +118,7 @@ export default function ProjectCard(projects) {
         
       </Collapse>
     </Card>
-    ))}
+    ))} 
        
 
     
