@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Footer from '../../components/footer/footer'
 import PortfolioCard from '../../components/portfolio/portfolioCard'
-import { useQuery } from '@apollo/client';
-import { QUERY_PROJECTS} from '../../utils/queries';
+import PortfolioSection from '../../components/portfolio/portfolioSection'
+// import { useQuery } from '@apollo/client';
+// import { QUERY_PROJECTS} from '../../utils/queries';
 
 import {
   Button,
@@ -21,7 +22,8 @@ import {
   Visibility,
   // Card,
 } from "semantic-ui-react";
-
+import { useQuery } from '@apollo/client';
+import { QUERY_PROJECTS } from '../../utils/queries';
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -196,24 +198,6 @@ const Portfolio = () => {
   const { loading, data } = useQuery(QUERY_PROJECTS);
   const projects = data?.projects || [];
 
-    // useEffect(() => {
-    //   if (data) {
-    //     dispatch({
-    //       type: QUERY_PROJECT,
-    //       project: data.project,
-    //     });
-    //     data.project.forEach((project) => {
-    //       idbPromise('project', 'put', project);
-    //     });
-    //   } else if (!loading) {
-    //     idbPromise('project', 'get').then((project) => {
-    //       dispatch({
-    //         type: QUERY_PROJECT,
-    //         project: project,
-    //       });
-    //     });
-    //   }
-    // }, [data, loading, dispatch]);
 
  return (
    <div>
@@ -222,7 +206,8 @@ const Portfolio = () => {
     <Container  style={{ padding: "3em 0em" }}>
       <Grid.Row >
         <Grid.Column centered width={8}>
-          <PortfolioCard />
+          <PortfolioCard projects={projects} />
+          {/* <PortfolioSection/> */}
         </Grid.Column>
       </Grid.Row>
     </Container>
