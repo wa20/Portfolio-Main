@@ -5,9 +5,13 @@
 
   ## Description
 
-A purpose built fitness tracking app that allows you to record and monitor numerous exercises. Users are able to upload excerices name, weights, reps, distance and duration.
+A portfolio built uising React to place and showcase projects. The App has multiple pages consisting of multiple components that are rendered through relevant pages.
 
-The front-end of the app has been built using HTML, CSS and Javascript. While the backend of the app uses node.js, express, Mongoose and Mongodb.
+Note: Although this application does include a back end it is not fully connected at this stage and will be part of the next development updates.
+
+The application features a portfolio page that consists of multiple cards containg information and releveant links to each project.
+
+Material ui and Semantic ui have been used top build and design this portfolio.
 
 
   ## Contents Table
@@ -20,9 +24,17 @@ The front-end of the app has been built using HTML, CSS and Javascript. While th
 
 ## Installation
 
+To install the app, clone the repo from GitHub, open in VS Code and open the terminal:
+
+* step 1 `npm install`
+* step 2 `npm run build`
+* step 3 `npm run develop`
+
+Ensure all dependencies and dev dependencies are installed if you encounter errors (npm install {package}).
 
 ## Usage
 
+To run the App simply enter `npm run develop`
 
 
 ## Collaborators
