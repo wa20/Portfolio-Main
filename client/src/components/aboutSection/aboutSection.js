@@ -18,7 +18,7 @@ import {
 // import './style.css'
 
 
-const avatar = require("../../profilepic/me-bws.jpg").default;
+const avatar = require("../../assets/me-bws.jpg").default;
 
 const AboutSection = () => {
 
