@@ -49,7 +49,8 @@ none
 ## Author
 - Wael Ahmed
 - Find the repo for this on: https://github.com/wa20/Portfolio-Main
-- Find app deployment on: https://wael-portfolio.herokuapp.com
+- Find gh-hub pages app deployment on: https://wa20.github.io/Portfolio-Main/
+- Find heroku app deployment on: https://wael-portfolio.herokuapp.com
 
 
 
