@@ -1,7 +1,8 @@
 {
-  "name": "client",
+  "name": "wael-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wa20.github.io/portfolio-main",
   "dependencies": {
     "@apollo/client": "^3.3.7",
     "@artsy/fresnel": "^1.9.0",
@@ -14,6 +15,7 @@
     "bootstrap": "^5.0.2",
     "dotenv": "^8.2.0",
     "emailjs-com": "^3.2.0",
+    "gh-pages": "^3.2.3",
     "graphql": "^14.6.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
@@ -30,7 +32,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "eslintConfig": {
     "extends": [
