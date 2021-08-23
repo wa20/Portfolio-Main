@@ -2,16 +2,16 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Footer from '../../components/footer/footer'
-import PortfolioCard from '../../components/portfolio/portfolioCard'
-import PortfolioSection from '../../components/portfolio/portfolioSection'
-// import { useQuery } from '@apollo/client';
-// import { QUERY_PROJECTS} from '../../utils/queries';
+import ProjectCard from '../../components/tempPortfolio/projectCard'
+import "./portfolioPage.css"
+
+
 
 import {
   Button,
   Container,
   // Divider,
-  Grid,
+  // Grid,
   // Header,
   Icon,
   // Image,
@@ -22,8 +22,7 @@ import {
   Visibility,
   // Card,
 } from "semantic-ui-react";
-import { useQuery } from '@apollo/client';
-import { QUERY_PROJECTS } from '../../utils/queries';
+
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -190,28 +189,28 @@ ResponsiveContainer.propTypes = {
 
 
 
-
-
-
-
 const Portfolio = () => {
-  const { loading, data } = useQuery(QUERY_PROJECTS);
-  const projects = data?.projects || [];
+  
 
 
  return (
    <div>
   <ResponsiveContainer>
 
-    <Container  style={{ padding: "3em 0em" }}>
-      <Grid.Row >
-        <Grid.Column centered width={8}>
-          <PortfolioCard projects={projects} />
+<div >
+    <Container  style={{ padding: "3em 0em" }} >
+      
+    {/* <Grid container spacing={8}> 
+      <Grid item xs={12}> */}
+         
           {/* <PortfolioSection/> */}
-        </Grid.Column>
-      </Grid.Row>
-    </Container>
+          <ProjectCard/>
 
+        {/* </Grid >
+      </Grid> */}
+     
+    </Container>
+ </div>
     <Footer />
   </ResponsiveContainer>
   </div>
