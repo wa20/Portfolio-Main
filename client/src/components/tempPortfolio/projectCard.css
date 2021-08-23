@@ -1,0 +1,19 @@
+.flex-row{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center;  */
+    /* max-height: 550px;
+   overflow: hidden; */
+  }
+
+  .grid{
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    max-height: 800px;
+    overflow: overlay;
+
+   
+}
