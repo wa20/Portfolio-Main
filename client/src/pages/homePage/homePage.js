@@ -102,7 +102,7 @@ const HomepageHeading = ({ mobile }) => (
                 <Menu.Item href="/Contact" as="a">Contact</Menu.Item>
                 <Menu.Item position="right">
                   <Button as="a" disabled inverted={!fixed} primary={fixed} style={{ marginLeft: "0.5em" }}>
-                    Resume
+                  Download Resume
                   </Button>
                 </Menu.Item>
               </Container>
@@ -171,7 +171,7 @@ const HomepageHeading = ({ mobile }) => (
                       disabled
                       style={{ marginLeft: "0.5em" }}
                     >
-                      Resume
+                      Download Resume
                     </Button>
                   </Menu.Item>
                 </Menu>

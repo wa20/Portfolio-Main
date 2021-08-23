@@ -75,7 +75,7 @@ class DesktopContainer extends Component {
                     negative={fixed}
                     style={{ marginLeft: "0.5em" }}
                   >
-                    Resume
+                    Download Resume
                   </Button>
                 </Menu.Item>
               </Container>
@@ -143,7 +143,8 @@ class MobileContainer extends Component {
                       disabled
                       style={{ marginLeft: "0.5em" }}
                     >
-                      Resume
+                      Download Resume
+                    
                     </Button>
                   </Menu.Item>
                 </Menu>
