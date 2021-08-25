@@ -198,7 +198,7 @@ const Portfolio = () => {
   <ResponsiveContainer>
 
 <div >
-    <Container  style={{ padding: "3em 0em" }} >
+    <Container  style={{ padding: "3em 0em",  width: "85vw"}} >
       
     {/* <Grid container spacing={8}> 
       <Grid item xs={12}> */}
