@@ -1,4 +1,4 @@
-import React from "react"
+// import React from "react"
 // import {codeWallpaper} from "./assets/codeWallpaper.png"
 
 const codeWallpaper = require("../../assets/projectImages/codeWallpaper.png").default;
@@ -13,6 +13,10 @@ const bdgTracker = require("../../assets/projectImages/budgetTracker.png").defau
 
 //temp solution to query projects
 const ProjectSchema =  [
+
+
+
+    
     {
         id: 1,
         name: "wrkwith-app",

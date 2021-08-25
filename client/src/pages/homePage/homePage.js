@@ -42,10 +42,7 @@ const HomepageHeading = ({ mobile }) => (
       />
       <Button href="/About" inverted color='red' 
       size="huge"
-      inverted
-
       className="neon-text"
-
         style={{
           fontSize: mobile ? "1.5em" : "1.7em",
           fontWeight: "normal",

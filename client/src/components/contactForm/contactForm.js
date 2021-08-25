@@ -111,7 +111,7 @@ return (
         </Grid>
 
     <Grid item xs={12}>
-        <TextField required id="standard-multiline-static" label="Message" multiline fullWidth rows={4} placeholder="Write Message"
+        <TextField required label="Message" multiline fullWidth rows={4} placeholder="Write Message"
         id="message"
         {...register('message', {
             required: true
