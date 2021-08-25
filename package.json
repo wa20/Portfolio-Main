@@ -1,6 +1,6 @@
 {
   "name": "wael-portfolio",
-  "homepage": "https://wa20.github.io/Portfolio-Main",
+  "homepage": ".",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
