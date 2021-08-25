@@ -23,9 +23,9 @@ const {
   
 
   const toastifySuccess = () => {
-    toast('Thank you, Message Has Been Sent!', {
-      position: 'Top-right',
-      autoClose: 5000,
+    toast('Your Message Has Been Sent!', {
+      position: 'top-right',
+      autoClose: 4000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
@@ -78,16 +78,16 @@ return (
     <Grid container spacing={3} style={{width:'50vw'}} >
 
         <Grid item xs={12} sm={6}>
-          <TextField required name="name" label="Name" fullWidth placeholder="name" 
+          <TextField required name="name" label="Name" fullWidth placeholder="Enter Your Name" 
           id="name" 
           {...register('name', {
-            required: { value: true, message: 'Enter your name' },
+            required: { value: true, message: 'Enter Your Name' },
             })}
           />
           {errors.name && <span className='errorMessage' style={{color:"red"}}>{errors.name.message}</span>}
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField required name="email" label="Email" fullWidth placeholder="Email"
+          <TextField required name="email" label="Email" fullWidth placeholder="Enter Your Contact Email"
           id="email"  
           {...register('email', {
             required: true,
@@ -100,7 +100,7 @@ return (
        
         <Grid item xs={12}>
 
-        <TextField required  name="subject" label="Subject" fullWidth placeholder="subject"
+        <TextField required  name="subject" label="Subject" fullWidth placeholder="Subject"
           id="subject" 
           {...register('subject', {
             required: { value: true, message: 'Enter a subject' },
