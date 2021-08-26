@@ -24,7 +24,7 @@ const {
 
   const toastifySuccess = () => {
     toast('Your Message Has Been Sent!', {
-      position: 'top-right',
+      position: 'bottom-right',
       autoClose: 4000,
       hideProgressBar: true,
       closeOnClick: true,
