@@ -17,6 +17,7 @@ const mongodb = require("../../assets/techLogo/mongodb.png").default;
 const mysql = require("../../assets/techLogo/mysql.png").default;
 const node = require("../../assets/techLogo/node.png").default;
 const react = require("../../assets/techLogo/react.png").default;
+const github = require("../../assets/techLogo/github.png").default;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -86,6 +87,11 @@ const itemData = [
     title: "React",
     size: "small",
   },
+  {
+    img: github,
+    title: "GitHub",
+    size: "small",
+  },
 ];
 
 export default function LogoList() {
@@ -93,7 +99,7 @@ export default function LogoList() {
 
   return (
     <div className={classes.root}>
-      <ImageList className={classes.imageList} cols={2.5}>
+      <ImageList className={classes.imageList} cols={2.0}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             {item.size == "tiny" ? (
