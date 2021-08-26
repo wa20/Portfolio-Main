@@ -122,10 +122,10 @@ const ProjectSchema = [
   {
     name: "What is 'Regx'?",
     image: codeWallpaper,
-    site: "",
+    site: "https://github.com/wa20/regex-tutorial",
     description:
       "A github gist explaing a specific or regex function, breaking down each part of the expression.",
-    repo: "https://github.com/wa20/regex-tutorial",
+    repo: "",
   },
 ];
 

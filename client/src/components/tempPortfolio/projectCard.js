@@ -24,6 +24,8 @@ const useStyles = makeStyles({
 export default function ProjectCard() {
   const classes = useStyles();
 
+  // let siteButton = project.site
+
   return (
     <div className="grid">
       {ProjectSchema.map((project) => (
@@ -48,8 +50,26 @@ export default function ProjectCard() {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button href={`${project.repo}`} variant="outlined"><Icon disabled name="github"/> View Repo</Button>
-     <Button href={`${project.site}`} variant="outlined"><Icon disabled name="tv"/> View Site</Button>
+              {project.repo.length > 0 ? (
+                <Button href={`${project.repo}`} variant="outlined">
+                  <Icon disabled name="github" /> View Repo
+                </Button>
+              ) : (
+                <Button disabled href={`${project.repo}`} variant="outlined">
+                  <Icon disabled name="github" /> Repo N/A
+                </Button>
+              )}
+
+              {project.site.length > 0 ? (
+                <Button href={`${project.site}`} variant="outlined">
+                  <Icon disabled name="tv" /> View Site
+                </Button>
+              ) : (
+                <Button disabled href={`${project.site}`} variant="outlined">
+                  <Icon disabled name="tv" />
+                  Site N/A
+                </Button>
+              )}
             </CardActions>
           </Card>
         </div>
