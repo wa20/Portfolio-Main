@@ -6,7 +6,7 @@ const avatar = require("../../assets/me-bws.jpg").default;
 
 const AboutSection = () => {
   return (
-    <Segment style={{ padding: "6em 0em" }} vertical>
+    <Segment style={{ padding: "em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle" >
         <Grid.Row textAlign="center" >
           <Grid.Column width={8}>
@@ -20,7 +20,7 @@ const AboutSection = () => {
               trusty SLR snapping the world around me.
             </p>
           </Grid.Column>
-          <Grid.Column floated="right" width={8}>
+          <Grid.Column floated="right" width={6}>
             <Image bordered rounded size="big" src={avatar} alt="jpg wael" />
           </Grid.Column>
         </Grid.Row>
