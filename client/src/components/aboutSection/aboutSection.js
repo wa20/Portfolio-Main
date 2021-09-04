@@ -14,7 +14,7 @@ const AboutSection = () => {
               Hi, I'm Wael!
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              Former media and insight anaylyst in the world of consumer data
+              Former media and insight analyst in the world of consumer data
               now turned <b>Full Stack Web Developer</b>. If I'm not behind a
               laptop coding away building websites then I'm outdoors with my
               trusty SLR snapping the world around me.
