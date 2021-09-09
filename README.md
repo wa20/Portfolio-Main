@@ -3,7 +3,7 @@
 
 # Portfolio
 
-  ## Description
+## Description
 
 A portfolio built uising React to place and showcase projects. The App has multiple pages consisting of multiple components that are rendered through relevant pages.
 
@@ -12,6 +12,11 @@ Note: Although this application does include a back end it is not fully connecte
 The application features a portfolio page that consists of multiple cards containg information and releveant links to each project.
 
 Material ui and Semantic ui have been used top build and design this portfolio.
+
+
+## Screenshots
+![Homepage](client/src/assets/screenshots/homepage.png)
+
 
 
   ## Contents Table
