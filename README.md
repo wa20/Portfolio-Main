@@ -15,7 +15,9 @@ Material ui and Semantic ui have been used top build and design this portfolio.
 
 
 ## Screenshots
-![Homepage](client/src/assets/screenshots/homepage.png)
+![Homepage](client/src/assets/screenshots/homePage.png)
+![Portfolio](client/src/assets/screenshots/portfolioPage.png)
+![Contact](client/src/assets/screenshots/contactPage.png)
 
 
 
