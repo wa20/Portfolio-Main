@@ -181,9 +181,13 @@ const About = () => (
   
   <ResponsiveContainer>
 
+
+    <div>
     <AboutSection/>
+    </div>
+    <div style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Footer/>
-    
+    </div>
 
   </ResponsiveContainer>
 );

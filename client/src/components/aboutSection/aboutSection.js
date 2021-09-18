@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Header, Image, Segment } from "semantic-ui-react";
+import { Grid, Header, Image, Segment, Container } from "semantic-ui-react";
 // import './style.css'
 
 const avatar = require("../../assets/me-bws.jpg").default;
@@ -9,7 +9,7 @@ const AboutSection = () => {
     <Segment style={{ padding: "5em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle" >
         <Grid.Row textAlign="center" >
-          <Grid.Column width={8}>
+          <Grid.Column width={6}>
             <Header as="h3" style={{ fontSize: "2em" }}>
               Hi, I'm Wael!
             </Header>
@@ -20,9 +20,11 @@ const AboutSection = () => {
               trusty SLR snapping the world around me.
             </p>
           </Grid.Column>
-          <Grid.Column floated="right" width={6}>
-            <Image bordered rounded size="big" src={avatar} alt="jpg wael" />
+          
+          <Grid.Column floated="right" width={6} style={{height:400}}>
+            <Image bordered rounded  src={avatar} alt="jpg wael" />
           </Grid.Column>
+         
         </Grid.Row>
       </Grid>
     </Segment>
