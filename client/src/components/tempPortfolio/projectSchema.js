@@ -22,7 +22,7 @@ const ProjectSchema = [
     image: outgrown,
     site: "https://outgrown-app.herokuapp.com",
     description:
-      "A Full Stack MERN app, that provides a solution for parents to sell and buy outgrown kids products",
+      "A Full Stack MERN app, that provides a solution for parents to sell and buy outgrown kids products.",
     repo: "https://github.com/wa20/outgrown",
   },
 
@@ -30,7 +30,7 @@ const ProjectSchema = [
     name: "wrkwith-app",
     image: wrkWith,
     description:
-      "A Project sharing application, built using the MVC model and utilising SQL to Store DATA and CRUD to provide functionality",
+      "A Project sharing app, built using MVC model. SQL to Store DATA and CRUD to provide functionality.",
     site: "https://wrkwith-app.herokuapp.com",
     repo: "https://github.com/wa20/wrkwith-app",
   },
@@ -38,7 +38,7 @@ const ProjectSchema = [
     name: "BookApp",
     image: BookApp,
     description:
-      "BookApp uses APIs to give users the ability to create their own virtual book library",
+      "BookApp uses APIs to give users the ability to create their own virtual book library.",
     site: "https://wa20.github.io/BookApp/",
     repo: "https://github.com/wa20/BookApp",
   },
@@ -55,7 +55,7 @@ const ProjectSchema = [
     name: "The Fitness Tracker",
     image: FitnessApp,
     description:
-      "A fitness tracking app to record exercises. backend is built using node.js, express, mongoose and MongoDB ",
+      "A fitness tracking app to record exercises. backend is built using node.js, express, mongoose and MongoDB.",
     site:
       "https://the-fitnesstracker.herokuapp.com/?id=60e43ebb51bc3a00155d11ac",
     repo: "https://github.com/wa20/the-fitness-tracker",
@@ -98,7 +98,7 @@ const ProjectSchema = [
     name: "Password Generator",
     image: PWGen,
     description:
-      "An app utilising vanilla JavaScript to generate a randomized password",
+      "An app utilising vanilla JavaScript to generate a randomized password.",
     site: "https://wa20.github.io/3-Password-Generator/",
     repo: "https://github.com/wa20/3-Password-Generator",
   },
@@ -106,7 +106,7 @@ const ProjectSchema = [
     name: "Timed Quiz",
     image: TimedQuiz,
     description:
-      "A timed quiz where you have to answer as many questions as you can in 60sec. Built using JavaScript",
+      "A timed quiz where you have to answer as many questions as you can in 60sec. Built using JavaScript.",
     site: "https://wa20.github.io/4-Timed-Quiz/",
     repo: "https://github.com/wa20/4-Timed-Quiz",
   },
@@ -114,7 +114,7 @@ const ProjectSchema = [
     name: "Daily Planner",
     image: dailyPlanner,
     description:
-      "A responsive daily work planning app to save events for each working hour of the day. Built using JavaScript",
+      "A responsive daily work planning app to save events for each working hour of the day. Built using JavaScript.",
     site: "https://github.com/wa20/5-Daily-Planner/settings/pages",
     repo: "https://github.com/wa20/5-Daily-Planner",
   },
