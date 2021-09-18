@@ -18,6 +18,8 @@ const mysql = require("../../assets/techLogo/mysql.png").default;
 const node = require("../../assets/techLogo/node.png").default;
 const react = require("../../assets/techLogo/react.png").default;
 const github = require("../../assets/techLogo/github.png").default;
+const graphQL = require("../../assets/techLogo/graphQL.png").default;
+const apollo = require("../../assets/techLogo/apollo.png").default;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,25 +45,32 @@ const useStyles = makeStyles((theme) => ({
 
 const itemData = [
   {
-    img: html5,
-    title: "HTML5",
-    size: "tiny",
+    img: react,
+    title: "React",
+    size: "small",
   },
   {
-    img: css3,
-    title: "CSS3",
-    size: "tiny",
+    img: graphQL,
+    title: "GraphQL",
+    size: "small",
   },
+  {
+    img: apollo,
+    title: "Apollo",
+    size: "small",
+  },
+  {
+    img: node,
+    title: "Node.Js",
+    size: "small",
+  },
+
   {
     img: js,
     title: "Javascript",
     size: "tiny",
   },
-  {
-    img: jquery,
-    title: "jQuery",
-    size: "tiny",
-  },
+  
   {
     img: express,
     title: "Express.js",
@@ -78,20 +87,26 @@ const itemData = [
     size: "small",
   },
   {
-    img: node,
-    title: "Node",
-    size: "small",
-  },
-  {
-    img: react,
-    title: "React",
-    size: "small",
-  },
-  {
     img: github,
     title: "GitHub",
     size: "small",
   },
+  {
+    img: jquery,
+    title: "jQuery",
+    size: "tiny",
+  },
+  {
+    img: css3,
+    title: "CSS3",
+    size: "tiny",
+  },
+  {
+    img: html5,
+    title: "HTML5",
+    size: "tiny",
+  },
+  
 ];
 
 export default function LogoList() {
