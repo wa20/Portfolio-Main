@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import Footer from '../../components/footer/footer'
+import Hero from '../../components/hero/hero'
 
 import {
   Button,
@@ -27,37 +28,37 @@ const { MediaContextProvider, Media } = createMedia({
   },
 })
 
-const HomepageHeading = ({ mobile }) => (
-    <Container text>
-      <Header
-        as="h1"
-        content=""
-        inverted
-        style={{
-          fontSize: mobile ? "2em" : "4em",
-          fontWeight: "normal",
-          marginBottom: 0,
-          marginTop: mobile ? "1.5em" : "3em",
-        }}
-      />
-      <Button href="/About" inverted color='red' 
-      size="huge"
-      className="neon-text"
-        style={{
-          fontSize: mobile ? "1.5em" : "1.7em",
-          fontWeight: "normal",
-          marginTop: mobile ? "0.5em" : "1.5em",
-        }}
-      >
-        Hi I'm Wael
-        <Icon name="chevron right"/>
-      </Button>
-    </Container>
-  );
+// const HomepageHeading = ({ mobile }) => (
+//     <Container text>
+//       <Header
+//         as="h1"
+//         content=""
+//         inverted
+//         style={{
+//           fontSize: mobile ? "2em" : "4em",
+//           fontWeight: "normal",
+//           marginBottom: 0,
+//           marginTop: mobile ? "1.5em" : "3em",
+//         }}
+//       />
+//       <Button href="/About" inverted color='red' 
+//       size="huge"
+//       className="neon-text"
+//         style={{
+//           fontSize: mobile ? "1.5em" : "1.7em",
+//           fontWeight: "normal",
+//           marginTop: mobile ? "0.5em" : "1.5em",
+//         }}
+//       >
+//         Hi I'm Wael
+//         <Icon name="chevron right"/>
+//       </Button>
+//     </Container>
+//   );
   
-  HomepageHeading.propTypes = {
-    mobile: PropTypes.bool,
-  }
+  // HomepageHeading.propTypes = {
+  //   mobile: PropTypes.bool,
+  // }
   
   
   class DesktopContainer extends Component {
@@ -80,7 +81,7 @@ const HomepageHeading = ({ mobile }) => (
             <Segment
               inverted
               textAlign='center'
-              style={{ minHeight: 700, padding: '2em 0em' }}
+              style={{ minHeight: 50, padding: '2em 0em' }}
               vertical
             >
               <Menu
@@ -104,7 +105,7 @@ const HomepageHeading = ({ mobile }) => (
                 </Menu.Item>
               </Container>
               </Menu>
-              <HomepageHeading />
+              {/* <HomepageHeading /> */}
             </Segment>
           </Visibility>
   
@@ -153,7 +154,7 @@ const HomepageHeading = ({ mobile }) => (
             <Segment
               inverted
               textAlign="center"
-              style={{ minHeight: 500, padding: "2em 1em" }}
+              style={{ minHeight: 50, padding: "2em 1em" }}
               vertical
             >
               <Container>
@@ -173,7 +174,7 @@ const HomepageHeading = ({ mobile }) => (
                   </Menu.Item>
                 </Menu>
               </Container>
-              <HomepageHeading mobile />
+              {/* <HomepageHeading mobile /> */}
             </Segment>
 
             {children}
@@ -202,9 +203,14 @@ const HomepageHeading = ({ mobile }) => (
   const Home = () => (
     <ResponsiveContainer>
       
-    
+      
+     <div style={{position: 'relative', top: 0, width: '100%'}}>
+      <Hero/>
+      </div>
+      <div style={{position: 'relative', bottom: 0, width: '100%'}}>
       <Footer />
-
+      </div>
+    
     </ResponsiveContainer>
   )
   
