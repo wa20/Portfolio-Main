@@ -6,10 +6,10 @@ const avatar = require("../../assets/me-bws.jpg").default;
 
 const AboutSection = () => {
   return (
-    <Segment style={{ padding: "5em 0em" }} vertical>
+    <Segment  style={{ padding: "5em 0em"}} vertical>
       <Grid container stackable verticalAlign="middle" >
         <Grid.Row textAlign="center" >
-          <Grid.Column width={6}>
+          <Grid.Column width={8}>
             <Header as="h3" style={{ fontSize: "2em" }}>
               Hi, I'm Wael!
             </Header>
