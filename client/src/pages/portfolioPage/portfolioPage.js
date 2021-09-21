@@ -11,17 +11,11 @@ import "./portfolioPage.css"
 import {
   Button,
   Container,
-  // Divider,
-  // Grid,
-  // Header,
   Icon,
-  // Image,
-  // List,
   Menu,
   Segment,
   Sidebar,
   Visibility,
-  // Card,
 } from "semantic-ui-react";
 
 
@@ -213,8 +207,6 @@ const Portfolio = () => {
     </Container>
 
     <LogoList/>
-
-    
  </div>
     <Footer />
   </ResponsiveContainer>

@@ -7,12 +7,7 @@ import Hero from '../../components/hero/hero'
 import {
   Button,
   Container,
-  // Divider,
-  // Grid,
-  Header,
   Icon,
-  // Image,
-  // List,
   Menu,
   Segment,
   Sidebar,
