@@ -3,7 +3,7 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import { Button, Container, Header, Icon, Segment } from "semantic-ui-react";
 import "./style.css";
-import { hidden } from "colors";
+// import { hidden } from "colors";
 
 const Hero = () => {
   return (
