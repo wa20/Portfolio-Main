@@ -1,0 +1,59 @@
+html, body, canvas { height: 100%; }
+
+html { overflow: hidden }
+
+body { margin: 0; }
+
+canvas {
+	position: absolute;
+	width: 100%;
+}
+
+
+.heroBackground {
+	background-image: url('../../assets/blackBrick.png');
+	background-position: center;
+	background-size: cover;
+	
+}
+
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+/* .btn-5:hover{
+	background: transparent;
+	color: #21ebff;
+  } */
+  .btn-5:before,
+  .btn-5:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:5px;
+	background: #8a1e1e;
+	width:0;
+	box-shadow:  10px 10px 50px #8a1e1e,  0 0 50px #8a1e1e inset;
+	transition:400ms ease all;
+  }
+  .btn-5:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+	width:100%;
+	transition:1000ms ease all;
+  }
+
+
+
+ 
