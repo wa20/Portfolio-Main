@@ -1,7 +1,5 @@
 import React from "react";
-import { createMedia } from "@artsy/fresnel";
-import PropTypes from "prop-types";
-import { Button, Container, Header, Icon, Segment } from "semantic-ui-react";
+import { Button, Icon, Segment } from "semantic-ui-react";
 import "./style.css";
 // import { hidden } from "colors";
 
@@ -10,9 +8,8 @@ const Hero = () => {
     <div>
       <Segment
         inverted
-        style={{ padding: "0em 0em" }}
         vertical
-        style={{ height: "70vh" }}
+        style={{ padding: "0em 0em" , height: "70vh" }}
         className="flex"
       >
         <div>

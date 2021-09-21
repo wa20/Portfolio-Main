@@ -3,10 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
-import IconButton from "@material-ui/core/IconButton";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 // import itemData from './itemData';
-import { Image, Segment } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 
 const js = require("../../assets/techLogo/js.png").default;
 const css3 = require("../../assets/techLogo/css3.png").default;
@@ -117,7 +115,7 @@ export default function LogoList() {
       <ImageList className={classes.imageList} cols={2.0}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
-            {item.size == "tiny" ? (
+            {item.size === "tiny" ? (
               <Image size="tiny" src={item.img} alt={item.title} />
             ) : (
               <Image size="small" src={item.img} alt={item.title} />

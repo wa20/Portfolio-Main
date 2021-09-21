@@ -126,7 +126,7 @@ const { MediaContextProvider, Media } = createMedia({
       const { sidebarOpened } = this.state
   
       return (
-        <Media as={Sidebar.Pushable} at="mobile" style="height:100vh">
+        <Media as={Sidebar.Pushable} at="mobile" style={{height:"100vh"}}>
         <Sidebar.Pushable>
           <Sidebar
             as={Menu}

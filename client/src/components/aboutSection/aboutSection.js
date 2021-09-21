@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Header, Image, Segment, Container } from "semantic-ui-react";
+import { Grid, Header, Image, Segment} from "semantic-ui-react";
 // import './style.css'
 
 const avatar = require("../../assets/me-bws.jpg").default;
