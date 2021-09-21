@@ -182,7 +182,7 @@ const Contact = () => (
 
     <ContactForm/>
     
-    <div style={{position: 'absolute', bottom: 0, width: '100%'}}>
+    <div style={{position: 'relative', bottom: 0, width: '100%'}}>
     <Footer/>
     </div>
 
