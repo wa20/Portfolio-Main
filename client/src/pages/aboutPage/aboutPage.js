@@ -65,12 +65,14 @@ class DesktopContainer extends Component {
                 <Menu.Item position="right">
                   <Button
                     as="a"
-                    disabled
+                    // disabled
                     inverted={!fixed}
                     negative={fixed}
                     style={{ marginLeft: "0.5em" }}
+                    href="https://drive.google.com/file/d/1oTXIj0UjQG1u8nPGlKdSfKlzFTqpedLB/view?ths=true"
+                    target="_blank"
                   >
-                    Download Resume
+                    View Resume
                   </Button>
                 </Menu.Item>
               </Container>
@@ -135,10 +137,12 @@ class MobileContainer extends Component {
                     <Button
                       as="a"
                       inverted
-                      disabled
+                     
                       style={{ marginLeft: "0.5em" }}
-                    >
-                      Download Resume
+                      href="https://drive.google.com/file/d/1oTXIj0UjQG1u8nPGlKdSfKlzFTqpedLB/view?ths=true"
+                    target="_blank"
+                  >
+                    View Resume
                     
                     </Button>
                   </Menu.Item>

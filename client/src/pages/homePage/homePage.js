@@ -94,8 +94,11 @@ const { MediaContextProvider, Media } = createMedia({
                 <Menu.Item href="/Portfolio" as="a">Portfolio</Menu.Item>
                 <Menu.Item href="/Contact" as="a">Contact</Menu.Item>
                 <Menu.Item position="right">
-                  <Button as="a" disabled inverted={!fixed} primary={fixed} style={{ marginLeft: "0.5em" }}>
-                  Download Resume
+                  <Button as="a" inverted={!fixed} primary={fixed} style={{ marginLeft: "0.5em" }}
+                    href="https://drive.google.com/file/d/1oTXIj0UjQG1u8nPGlKdSfKlzFTqpedLB/view?ths=true"
+                    target="_blank"
+                  >
+                    View Resume
                   </Button>
                 </Menu.Item>
               </Container>
@@ -161,10 +164,12 @@ const { MediaContextProvider, Media } = createMedia({
                     <Button
                       as="a"
                       inverted
-                      disabled
+                      
                       style={{ marginLeft: "0.5em" }}
-                    >
-                      Download Resume
+                      href="https://drive.google.com/file/d/1oTXIj0UjQG1u8nPGlKdSfKlzFTqpedLB/view?ths=true"
+                    target="_blank"
+                  >
+                    View Resume
                     </Button>
                   </Menu.Item>
                 </Menu>
