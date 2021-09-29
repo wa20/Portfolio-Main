@@ -20,7 +20,7 @@ const Footer = () => (
             <List link inverted>
               <List.Item href="https://www.linkedin.com/in/wael20/" target='_blank' as="a"><Icon name='linkedin'/> LinkedIn</List.Item>
               <List.Item href="https://github.com/wa20" target='_blank' as="a"><Icon  name='github'/> GitHub</List.Item>
-              <List.Item href="/contact"  as="a"><Icon name='mail'/> Email</List.Item>
+              <List.Item href="mailto: waelahmed.fsdev@gmail.com" target='_blank' as="a"><Icon name='mail'/> Email</List.Item>
             </List>
           </Grid.Column>
 
