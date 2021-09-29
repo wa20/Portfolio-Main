@@ -14,6 +14,7 @@ const BookApp = require("../../assets/projectImages/bookapp.png").default;
 const bdgTracker = require("../../assets/projectImages/budgetTracker.png")
   .default;
 const outgrown = require("../../assets/projectImages/outgrown.png").default;
+const tripper = require("../../assets/projectImages/tripper.png").default;
 
 //temp solution to query projects
 const ProjectSchema = [
@@ -42,7 +43,14 @@ const ProjectSchema = [
     site: "https://wa20.github.io/BookApp/",
     repo: "https://github.com/wa20/BookApp",
   },
-
+  {
+    name: "tripper",
+    image: tripper,
+    site: "https://app-tripper.herokuapp.com/",
+    description:
+      "A React app, using Google API and a Travel API to show local attractions to you",
+    repo: "https://github.com/wa20/tripper",
+  },
   {
     name: "The Budget Tracker",
     image: bdgTracker,
