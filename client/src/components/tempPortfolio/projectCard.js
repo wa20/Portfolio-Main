@@ -51,23 +51,23 @@ export default function ProjectCard() {
             </CardActionArea>
             <CardActions>
               {project.repo.length > 0 ? (
-                <Button href={`${project.repo}`} variant="outlined">
+                <Button href={`${project.repo}`} target='_blank' variant="outlined">
                   <Icon disabled name="github" /> View Repo
                 </Button>
               ) : (
-                <Button disabled href={`${project.repo}`} variant="outlined">
+                <Button disabled href={`${project.repo}`} target='_blank' variant="outlined">
                   <Icon disabled name="github" /> Repo N/A
                 </Button>
               )}
 
               {project.site.length > 0 ? (
-                <Button href={`${project.site}`} variant="outlined">
+                <Button href={`${project.site}`} target='_blank' variant="outlined">
                   <Icon disabled name="tv" /> View Site
                 </Button>
               ) : (
-                <Button disabled href={`${project.site}`} variant="outlined">
+                <Button disabled href={`${project.site}`} target='_blank' variant="outlined">
                   <Icon disabled name="tv" />
-                  Site N/A
+                  Backend Application
                 </Button>
               )}
             </CardActions>

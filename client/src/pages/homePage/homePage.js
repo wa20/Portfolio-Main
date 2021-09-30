@@ -95,7 +95,7 @@ const { MediaContextProvider, Media } = createMedia({
                 <Menu.Item href="/Contact" as="a">Contact</Menu.Item>
                 <Menu.Item position="right">
                   <Button as="a" inverted={!fixed} primary={fixed} style={{ marginLeft: "0.5em" }}
-                    href="https://drive.google.com/file/d/1oTXIj0UjQG1u8nPGlKdSfKlzFTqpedLB/view?ths=true"
+                    href="https://drive.google.com/file/d/1cMGf2QDfGV2RxGwp9EMSUjc-ULefD0M4/view?usp=sharing"
                     target="_blank"
                   >
                     View Resume
@@ -166,7 +166,7 @@ const { MediaContextProvider, Media } = createMedia({
                       inverted
                       
                       style={{ marginLeft: "0.5em" }}
-                      href="https://drive.google.com/file/d/1oTXIj0UjQG1u8nPGlKdSfKlzFTqpedLB/view?ths=true"
+                      href="https://drive.google.com/file/d/1cMGf2QDfGV2RxGwp9EMSUjc-ULefD0M4/view?usp=sharing"
                     target="_blank"
                   >
                     View Resume
