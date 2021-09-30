@@ -123,7 +123,7 @@ const ProjectSchema = [
     image: dailyPlanner,
     description:
       "A responsive daily work planning app to save events for each working hour of the day. Built using JavaScript.",
-    site: "https://github.com/wa20/5-Daily-Planner/settings/pages",
+    site: "https://wa20.github.io/5-Daily-Planner/",
     repo: "https://github.com/wa20/5-Daily-Planner",
   },
 

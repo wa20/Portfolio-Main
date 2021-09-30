@@ -66,7 +66,7 @@ export default function ProjectCard() {
                 </Button>
               ) : (
                 <Button disabled href={`${project.site}`} target='_blank' variant="outlined">
-                  <Icon disabled name="tv" />
+                  {/* <Icon disabled name="tv" /> */}
                   Backend Application
                 </Button>
               )}
