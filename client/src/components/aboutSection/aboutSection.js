@@ -31,9 +31,9 @@ const avatar = require("../../assets/me-bws.jpg").default;
 
 const AboutSection = () => {
   return (
-    <Segment style={{ padding: "10em 0em" }} vertical>
-      <Grid container stackable verticalAlign="middle">
-        <Grid.Row textAlign="center">
+    <Segment style={{ padding: "4em 0em" }} vertical>
+      <Grid container fluid stackable verticalAlign="middle">
+        <Grid.Row >
           <Grid.Column width={8}>
             <Header as="h3" style={{ fontSize: "2em" }}>
               Hi, I'm Wael!
@@ -118,8 +118,9 @@ const AboutSection = () => {
               </Grid.Row>
             </Grid>
           </Grid.Column>
-          <Grid.Column floated="right" width={6} style={{ height: 400 }}>
-            <Image bordered rounded src={avatar} alt="jpg wael" />
+          
+          <Grid.Column floated="right" width={8} style={{ height: 700, width:300, borderRadius:'5px',}} className='background'>
+            {/* <Image bordered rounded src={avatar} alt="jpg wael" /> */}
           </Grid.Column>
         </Grid.Row>
       </Grid>
