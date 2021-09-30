@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Footer from '../../components/footer/footer'
 import ProjectCard from '../../components/tempPortfolio/projectCard'
-import LogoList from '../../components/portfolioCarousel/carousel'
+// import LogoList from '../../components/portfolioCarousel/carousel'
 import "./portfolioPage.css"
 
 
@@ -206,11 +206,11 @@ const Portfolio = () => {
        
     </Container>
 
-    <Container textAlign="center" style={{ padding: "2em 0em",  width: "100vw"}} >
+    {/* <Container textAlign="center" style={{ padding: "2em 0em",  width: "100vw"}} >
       <h2>Languages and Tools Used</h2>
-    </Container>
+    </Container> */}
 
-    <LogoList/>
+    {/* <LogoList/> */}
  </div>
     <Footer />
   </ResponsiveContainer>
