@@ -77,7 +77,7 @@ class DesktopContainer extends Component {
                     inverted={!fixed}
                     negative={fixed}
                     style={{ marginLeft: "0.5em" }}
-                    href="https://drive.google.com/file/d/1cMGf2QDfGV2RxGwp9EMSUjc-ULefD0M4/view?usp=sharing"
+                    href="hhttps://drive.google.com/file/d/1WcWu-vKQkrtqT1QYOtF7RANKxVSpicC6/view?usp=sharing"
                     target="_blank"
                   >
                     View Resume
@@ -152,7 +152,7 @@ class MobileContainer extends Component {
                       inverted
                       
                       style={{ marginLeft: "0.5em" }}
-                      href="https://drive.google.com/file/d/1cMGf2QDfGV2RxGwp9EMSUjc-ULefD0M4/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1WcWu-vKQkrtqT1QYOtF7RANKxVSpicC6/view?usp=sharing"
                     target="_blank"
                   >
                     View Resume
