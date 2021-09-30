@@ -31,9 +31,9 @@ export default function ProjectCard() {
       {ProjectSchema.map((project) => (
         <div>
           <Card
-            className={classes.root}
+            className={classes.root, 'scale2'}
             style={{ margin: "20px", marginBottom: "10px" }}
-            className='scale2'
+            // className='scale2'
           >
             <CardActionArea>
               <CardMedia

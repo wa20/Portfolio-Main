@@ -17,15 +17,15 @@ const jquery = require("../../assets/techSVGLogo/jquery-original-wordmark.svg").
 const materialui = require("../../assets/techSVGLogo/materialui-original.svg").default;
 const mongodb = require("../../assets/techSVGLogo/mongodb-original-wordmark.svg").default;
 const mysql = require("../../assets/techSVGLogo/mysql-original-wordmark.svg").default;
-const nextjs = require("../../assets/techSVGLogo/nextjs-original-wordmark.svg").default;
+// const nextjs = require("../../assets/techSVGLogo/nextjs-original-wordmark.svg").default;
 const nodejs = require("../../assets/techSVGLogo/nodejs-original-wordmark.svg").default;
-const npm = require("../../assets/techSVGLogo/npm-original-wordmark.svg").default;
+// const npm = require("../../assets/techSVGLogo/npm-original-wordmark.svg").default;
 const photoshop = require("../../assets/techSVGLogo/photoshop-plain.svg").default;
 const react = require("../../assets/techSVGLogo/react-original-wordmark.svg").default;
-const redux = require("../../assets/techSVGLogo/redux-original.svg").default;
+// const redux = require("../../assets/techSVGLogo/redux-original.svg").default;
 const sequelize = require("../../assets/techSVGLogo/sequelize-original-wordmark.svg").default;
 
-const avatar = require("../../assets/me-bws.jpg").default;
+// const avatar = require("../../assets/me-bws.jpg").default;
 
 const AboutSection = () => {
   return (
