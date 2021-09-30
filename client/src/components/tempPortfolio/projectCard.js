@@ -33,6 +33,7 @@ export default function ProjectCard() {
           <Card
             className={classes.root}
             style={{ margin: "20px", marginBottom: "10px" }}
+            className='scale2'
           >
             <CardActionArea>
               <CardMedia
