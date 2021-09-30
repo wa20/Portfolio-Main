@@ -77,7 +77,7 @@ class DesktopContainer extends Component {
                     inverted={!fixed}
                     negative={fixed}
                     style={{ marginLeft: "0.5em" }}
-                    href="hhttps://drive.google.com/file/d/1WcWu-vKQkrtqT1QYOtF7RANKxVSpicC6/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1WcWu-vKQkrtqT1QYOtF7RANKxVSpicC6/view?usp=sharing"
                     target="_blank"
                   >
                     View Resume
